@@ -1,12 +1,19 @@
 import math
 
+
 def calcular_area_cuadrado(lado):
+    if lado <= 0:
+        raise ValueError("El lado debe ser mayor que cero.")
     return lado * lado
 
 def calcular_area_triangulo(base, altura):
+    if base <= 0 or altura <= 0:
+        raise ValueError("La base y la altura deben ser mayores que cero.")
     return (base * altura) / 2
 
 def calcular_area_circulo(radio):
+    if radio <= 0:
+        raise ValueError("El radio debe ser mayor que cero.")
     return math.pi * radio ** 2
 
 def main():
