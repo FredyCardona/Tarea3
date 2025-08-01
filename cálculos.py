@@ -17,16 +17,21 @@ def main():
     print("|3. Círculo                        |")
     print("|__________________________________|")
     opcion = input("Selecciona una opción (1-3): ")
+    opcion = int(opcion)
 
-    if opcion == "1":
-        lado = float(input("Ingresa el lado del cuadrado: "))
+    if opcion == 1:
+        lado = input("Ingresa el lado del cuadrado: ")
+        lado = float(input)
         print("Área del cuadrado:", calcular_area_cuadrado(lado))
-    elif opcion == "2":
-        base = float(input("Ingresa la base del triángulo: "))
-        altura = float(input("Ingresa la altura del triángulo: "))
+    elif opcion == 2:
+        base =input("Ingresa la base del triángulo: ")
+        altura=input("Ingresa la altura del triángulo: ")
+        base = float(base)
+        altura = float(altura)
         print("Área del triángulo:", calcular_area_triangulo(base, altura))
-    elif opcion == "3":
-        radio = float(input("Ingresa el radio del círculo: "))
+    elif opcion == 3:
+        radio = input("Ingresa el radio del círculo: ")
+        radio = float(radio)
         print("Área del círculo:", calcular_area_circulo(radio))
     else:
         print("Opción no válida.")
