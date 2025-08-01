@@ -10,11 +10,12 @@ def calcular_area_circulo(radio):
     return math.pi * radio ** 2
 
 def main():
-    print("Calculadora de áreas:")
-    print("1. Cuadrado")
-    print("2. Triángulo")
-    print("3. Círculo")
-
+    print("___________________________________")
+    print("| Calculadora de áreas             |")
+    print("|1. Cuadrado                       |")
+    print("|2. Triángulo                      |")
+    print("|3. Círculo                        |")
+    print("|__________________________________|")
     opcion = input("Selecciona una opción (1-3): ")
 
     if opcion == "1":
