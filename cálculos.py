@@ -26,22 +26,33 @@ def main():
     opcion = input("Selecciona una opción (1-3): ")
     opcion = int(opcion)
 
-    if opcion == 1:
-        lado = input("Ingresa el lado del cuadrado: ")
-        lado = float(input)
-        print("Área del cuadrado:", calcular_area_cuadrado(lado))
-    elif opcion == 2:
-        base =input("Ingresa la base del triángulo: ")
-        altura=input("Ingresa la altura del triángulo: ")
-        base = float(base)
-        altura = float(altura)
-        print("Área del triángulo:", calcular_area_triangulo(base, altura))
-    elif opcion == 3:
-        radio = input("Ingresa el radio del círculo: ")
-        radio = float(radio)
-        print("Área del círculo:", calcular_area_circulo(radio))
+    if opcion == "1":
+        try:
+            lado = float(input("Ingresa el lado del cuadrado: "))
+            area = calcular_area_cuadrado(lado)
+            print(f"Área del cuadrado: {area:.2f}")
+        except ValueError as e:
+            print("Error:", e)
+    elif opcion == "2":
+        try:
+            base = float(input("Ingresa la base del triángulo: "))
+            altura = float(input("Ingresa la altura del triángulo: "))
+            area = calcular_area_triangulo(base, altura)
+            print(f"Área del triángulo: {area:.2f}")
+        except ValueError as e:
+            print("Error:", e)
+    elif opcion == "3":
+        try:
+            radio = float(input("Ingresa el radio del círculo: "))
+            area = calcular_area_circulo(radio)
+            print(f"Área del círculo: {area:.2f}")
+        except ValueError as e:
+            print("Error:", e)
+    elif opcion == "4":
+        print("Saliendo del programa...")
+        break
     else:
-        print("Opción no válida.")
+        print("Opción no válida. Intenta de nuevo.")
 
 if __name__ == "__main__":
     main()
